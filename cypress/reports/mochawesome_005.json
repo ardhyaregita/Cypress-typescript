@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-08T16:30:45.477Z",
+    "end": "2023-09-08T16:30:56.853Z",
+    "duration": 11376,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "60a0130d-48fc-4727-b592-a994e4578f37",
+      "title": "",
+      "fullFile": "cypress/integration/login.ts",
+      "file": "cypress/integration/login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test Add Product to Cart",
+          "fullTitle": "Test Add Product to Cart",
+          "timedOut": null,
+          "duration": 8944,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ncartPage.cartSauceLabsBackpack();\ncartPage.cartDetail();",
+          "err": {
+            "message": "Error: Syntax error, unrecognized expression: //*[@id=\"shopping_cart_container\"]/a",
+            "estack": "Error: Syntax error, unrecognized expression: //*[@id=\"shopping_cart_container\"]/a\n    at Function.Sizzle.error (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:109597:8)\n    at Sizzle.tokenize (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:110249:11)\n    at Sizzle.select (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:110676:20)\n    at Function.Sizzle [as find] (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:108901:9)\n    at jQuery.fn.init.find (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:110932:11)\n    at new jQuery.fn.init (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:111047:40)\n    at Object.query (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:184887:10)\n    at $Cy.$$ (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:173026:65)\n    at getElements (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159826:20)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:13022:23)\n    at Function.Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:10296:29)\n    at resolveElements (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159876:67)\n    at Context.get (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:159887:14)\n    at https://www.saucedemo.com/__cypress/runner/cypress_runner.js:172123:15\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:13022:23)",
+            "diff": null
+          },
+          "uuid": "0a07f37d-1f6f-4674-9a44-82d2adbc730f",
+          "parentUUID": "60a0130d-48fc-4727-b592-a994e4578f37",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "0a07f37d-1f6f-4674-9a44-82d2adbc730f"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 8944,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

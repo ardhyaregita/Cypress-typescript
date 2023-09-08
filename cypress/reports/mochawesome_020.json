@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-08T16:47:49.535Z",
+    "end": "2023-09-08T16:48:13.210Z",
+    "duration": 23675,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da8ae794-476a-4d15-ad90-00264c66a420",
+      "title": "",
+      "fullFile": "cypress/integration/login.ts",
+      "file": "cypress/integration/login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test Add Product to Cart",
+          "fullTitle": "Test Add Product to Cart",
+          "timedOut": null,
+          "duration": 9390,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ncartPage.cartSauceLabsBackpack();\ncartPage.cartDetail();",
+          "err": {},
+          "uuid": "d7d4a463-7e78-4980-afd4-888e88af82e8",
+          "parentUUID": "da8ae794-476a-4d15-ad90-00264c66a420",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Add Product to Cart",
+          "fullTitle": "Test Add Product to Cart",
+          "timedOut": null,
+          "duration": 11811,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ncartPage.cartDetail();\ncartPage.continueShopping();\ndashboardPage.sauceLabsBackpack();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sauce Labs Backpack' but never did.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sauce Labs Backpack' but never did.\n    at CartPage.cartDetail (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:157:44)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:126:14)",
+            "diff": null
+          },
+          "uuid": "1b5fba81-7eab-44f5-a2a4-dc6a29b8437c",
+          "parentUUID": "da8ae794-476a-4d15-ad90-00264c66a420",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "d7d4a463-7e78-4980-afd4-888e88af82e8"
+      ],
+      "failures": [
+        "1b5fba81-7eab-44f5-a2a4-dc6a29b8437c"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 21201,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

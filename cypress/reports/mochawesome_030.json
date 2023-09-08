@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 5,
+    "passes": 3,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-09-08T16:52:18.308Z",
+    "end": "2023-09-08T16:52:52.636Z",
+    "duration": 34328,
+    "testsRegistered": 5,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+      "title": "",
+      "fullFile": "cypress/integration/login.ts",
+      "file": "cypress/integration/login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test LOGIN",
+          "fullTitle": "Test LOGIN",
+          "timedOut": null,
+          "duration": 7808,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:226:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:108:15)",
+            "diff": null
+          },
+          "uuid": "951a82e7-9e03-427b-ab10-fd86d4ac0fc0",
+          "parentUUID": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Invalid Password",
+          "fullTitle": "Test Sauce Demo Invalid Password",
+          "timedOut": null,
+          "duration": 2707,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'invalidPass');\nloginPage.assertLoginFail();",
+          "err": {},
+          "uuid": "4db838d4-0d31-4a48-b0d4-72821968be67",
+          "parentUUID": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Sauce Demo Sauce labs product backpack",
+          "fullTitle": "Test Sauce Demo Sauce labs product backpack",
+          "timedOut": null,
+          "duration": 5798,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\nloginPage.assertLogin();\ndashboardPage.sauceLabsBackpack();",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.peek`, but never found it.\n    at LoginPage.assertLogin (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:226:25)\n    at Context.eval (https://www.saucedemo.com/__cypress/tests?p=cypress\\integration\\login.ts:116:15)",
+            "diff": null
+          },
+          "uuid": "036353f4-aaab-4de5-ba8b-eed768402fac",
+          "parentUUID": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Add Product to Cart",
+          "fullTitle": "Test Add Product to Cart",
+          "timedOut": null,
+          "duration": 7148,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ncartPage.cartSauceLabsBackpack();\ncartPage.cartDetail();",
+          "err": {},
+          "uuid": "31e0bd7a-08a6-4447-93f5-7ef47008791d",
+          "parentUUID": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Test Continue Shopping",
+          "fullTitle": "Test Continue Shopping",
+          "timedOut": null,
+          "duration": 7798,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.login(URL, 'standard_user', 'secret_sauce');\ncartPage.cartSauceLabsBackpack();\ncartPage.cartDetail();\ncartPage.continueShopping();\ndashboardPage.sauceLabsBackpack();",
+          "err": {},
+          "uuid": "a6abeb42-e08e-4c3a-8891-fe6b6d13087d",
+          "parentUUID": "692c6c40-aecf-4b1e-acc0-d71e41eb0751",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "4db838d4-0d31-4a48-b0d4-72821968be67",
+        "31e0bd7a-08a6-4447-93f5-7ef47008791d",
+        "a6abeb42-e08e-4c3a-8891-fe6b6d13087d"
+      ],
+      "failures": [
+        "951a82e7-9e03-427b-ab10-fd86d4ac0fc0",
+        "036353f4-aaab-4de5-ba8b-eed768402fac"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 31259,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "chart": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
